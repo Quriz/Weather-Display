@@ -1,0 +1,10 @@
+[workspace]
+members = [
+    "renderer",
+    "knowyourmeme",
+    "brightsky",
+    "build-utils"
+]
+exclude = [
+    "esp"
+]

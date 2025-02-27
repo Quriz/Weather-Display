@@ -1,0 +1,8 @@
+{
+    "wifi": {
+        "ssid": "Wifi",
+        "psk": "awesomeplaintextpassword123"
+    },
+    "image_url": "http://123.123.123.123/webdav/esp_image.img",
+    "timezone": "Europe/Berlin"
+}

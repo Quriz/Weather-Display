@@ -1,0 +1,1 @@
+espflash flash target/xtensa-esp32-espidf/release/weatherdisplay-esp

@@ -1,0 +1,65 @@
+name: Continuous Integration
+
+on:
+  push:
+    paths-ignore:
+      - "**/README.md"
+  pull_request:
+  workflow_dispatch:
+
+env:
+  CARGO_TERM_COLOR: always
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  # Lint and test the code for renderer, knowyourmeme and brightsky
+  rust-checks:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        action:
+          - command: clippy
+            args: --all-targets --all-features --workspace -- -D warnings
+          - command: test
+            args: --all --all-features --workspace
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Enable caching
+        uses: Swatinem/rust-cache@v2
+
+      - name: Create config.json
+        run: echo '${{ secrets.RENDERER_CONFIG_JSON }}' | jq '.' > renderer/config.json
+
+      - name: Run command
+        run: cargo ${{ matrix.action.command }} ${{ matrix.action.args }}
+
+  # Lint the code for esp
+  rust-checks-esp:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Rust
+        uses: esp-rs/xtensa-toolchain@v1.5
+        with:
+          default: true
+          buildtargets: esp32
+          ldproxy: true
+
+      - name: Enable caching
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: esp
+
+      - name: Create config.json
+        run: echo '${{ secrets.ESP_CONFIG_JSON }}' | jq '.' > ./esp/config.json
+
+      - name: Run command
+        run: cd esp && cargo clippy --all-features -- -D warnings

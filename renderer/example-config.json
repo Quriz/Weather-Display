@@ -1,0 +1,29 @@
+{
+    "webdav_url": "http://123.123.123.123/webdav/",
+    "image_name": "esp_image.img",
+    "location": {
+        "lat": 10.78912,
+        "lon": 30.0123
+    },
+    "timezone": "Europe/Berlin",
+    "time_format": "%d/%m/%Y %I %p", // See https://docs.rs/chrono/latest/chrono/format/strftime/index.html
+    "weekday_names": {
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday"
+    },
+    "weather_conditions": {
+        "dry": "Normal weather",
+        "fog": "Foggy",
+        "rain": "Rainy",
+        "sleet": "Sleet",
+        "snow": "It snows!",
+        "hail": "Hail",
+        "thunderstorm": "Thunderstorm",
+        "null": "No weather data"
+    }
+}

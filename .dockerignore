@@ -1,0 +1,3 @@
+# Ignore unnecessary files to reduce Docker copy times
+*/target
+/esp

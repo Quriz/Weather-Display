@@ -1,0 +1,26 @@
+[package]
+name = "renderer"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "^1"
+reqwest = { version = "^0.12", features = ["blocking"] }
+chrono = "^0.4"
+chrono-tz = { version = "^0.9", features = ["serde"] }
+serde_json = "^1"
+image = "^0.25"
+imageproc = "^0.25"
+rusttype = "^0.9"
+url = "^2.5"
+embedded-graphics = "0.8" # must match version in epd-waveshare
+epd-waveshare = "0.6.0"
+brightsky = { path = "../brightsky" }
+knowyourmeme = { path = "../knowyourmeme" }
+
+[build-dependencies]
+serde_json = "^1"
+anyhow = "^1"
+build-utils = { path = "../build-utils" }

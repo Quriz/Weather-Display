@@ -1,0 +1,14 @@
+home := env_var("HOME")
+
+build:
+	. {{home}}/export-esp.sh
+	cargo build
+run:
+	. {{home}}/export-esp.sh
+	cargo run
+run-release:
+	. {{home}}/export-esp.sh
+	cargo run --release
+
+clean:
+	cargo clean
