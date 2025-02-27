@@ -1,8 +1,7 @@
-
 <div align="center">
 	<h1>Weather Display</h1>
 	<image src="https://github.com/user-attachments/assets/e84c1bba-f061-47e3-adb1-d1f186970022" alt="Weather Display Output" width="60%">
-	<p>An e-ink weather display based on <a href="https://github.com/boustrophedon/eink-esp-weather-display">Harry Stern's Halldisplay</a></p>
+	<p>An e-ink weather display based on <a href="https://github.com/boustrophedon/eink-esp-weather-display">Harry Stern's Halldisplay</a>.</p>
 </div>
 
 ## Overview
@@ -13,7 +12,7 @@ The weather display displays the following:
 - Current temperature in celsius
 - Current humidity
 - Current wind speeds
-- Current weather state. 
+- Current weather state
 - Temperature and precipitation forecast for the current and next three days
 - Latest meme from the [KnowYourMeme](https://knowyourmeme.com/) home page
 
