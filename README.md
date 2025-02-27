@@ -1,10 +1,9 @@
-# Weather Display
 
-<p align="center">
+<div align="center">
+	<h1>Weather Display</h1>
 	<image src="https://github.com/user-attachments/assets/e84c1bba-f061-47e3-adb1-d1f186970022" alt="Weather Display Output" width="60%">
-</p>
-
-An e-ink weather display based on [Harry Stern's Halldisplay](https://github.com/user-attachments/assets/e84c1bba-f061-47e3-adb1-d1f186970022).
+	<p>An e-ink weather display based on <a href="https://github.com/boustrophedon/eink-esp-weather-display">Harry Stern's Halldisplay</a></p>
+</div>
 
 ## Overview
 
